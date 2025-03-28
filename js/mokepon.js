@@ -38,18 +38,18 @@ function seleccionarMascotaJugador(){
     let sectionSeleccionarAtaque= document.getElementById("seleccionar-ataque")
     sectionSeleccionarAtaque.style.display = "flex"
 
-    let hipodogeSeleccionado = document.getElementById("hipodoge").checked
-    let capipepoSeleccionado = document.getElementById("capipepo").checked
-    let ratigueyaSeleccionado = document.getElementById("ratigueya").checked
+    let hipodogeSeleccionado = document.getElementById("Nepenthes Alucinada").checked
+    let capipepoSeleccionado = document.getElementById("Dionaea Mechánica").checked
+    let ratigueyaSeleccionado = document.getElementById("Drosera Cósmica").checked
 
     let spanMascotaJugador = document.getElementById("mascota-jugador")
 
     if (hipodogeSeleccionado){
-        spanMascotaJugador.innerHTML = "Hipodoge"
+        spanMascotaJugador.innerHTML = "Nepenthes Alucinada"
     }else if(capipepoSeleccionado){
-        spanMascotaJugador.innerHTML = "Capipepo"
+        spanMascotaJugador.innerHTML = "Dionaea Mechánica"
     }else if(ratigueyaSeleccionado){
-        spanMascotaJugador.innerHTML = "Ratigueya"
+        spanMascotaJugador.innerHTML = "Drosera Cósmica"
     }else{
         alert("Debes seleccionar una Mascota")
     }
@@ -62,11 +62,11 @@ function seleccionarMascotaEmemigo(){
     let spanMascotaEnemigo = document.getElementById("mascota-enemigo")
 
     if(mascotaAleatorio == 1){
-        spanMascotaEnemigo.innerHTML = "Hipodoge"
+        spanMascotaEnemigo.innerHTML = "Nepenthes Alucinada"
     }else if(mascotaAleatorio == 2){
-        spanMascotaEnemigo.innerHTML = "Capipepo"
+        spanMascotaEnemigo.innerHTML = "Dionaea Mechánica"
     }else{
-        spanMascotaEnemigo.innerHTML = "Ratigueya"
+        spanMascotaEnemigo.innerHTML = "Drosera Cósmica"
     }
 
 }

@@ -2,7 +2,7 @@
 
 body{
     font-family: "Pixelify Sans", sans-serif;
-    background-image: url("assets/fondo.jpg");
+    background-image: url("assets/19713308_y0qg_sxld_170312.jpg");
     background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
     background-position: center; /* Centra la imagen en el fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -132,5 +132,5 @@ input{
 }
 input[type="radio"]:checked + .tarjeta-de-mokepon {
     background: #90e0ef;
-    border: 2px solid #03045e;
+    border: 2px solid #010213;
 }
