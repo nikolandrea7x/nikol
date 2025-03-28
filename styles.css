@@ -121,3 +121,16 @@ input{
     text-align: center;
     text-align: center;
 }
+.tarjeta-de-mokepon {
+    background: #bde0fe;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.tarjeta-de-mokepon:hover {
+    transform: scale(1.05);
+}
+input[type="radio"]:checked + .tarjeta-de-mokepon {
+    background: #90e0ef;
+    border: 2px solid #03045e;
+}
