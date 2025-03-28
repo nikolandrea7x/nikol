@@ -134,3 +134,75 @@ input[type="radio"]:checked + .tarjeta-de-mokepon {
     background: #90e0ef;
     border: 2px solid #060d99;
 }
+/* Contenedor de botones */
+#seleccionar-ataque div {
+    display: flex;
+    gap: 15px; /* Espacio entre botones */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Estilo base para todos los botones */
+.boton-ataque {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 12px;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Botón FUEGO */
+#boton-fuego {
+    background: linear-gradient(to bottom, #FF5F6D, #FF2E4D);
+    border: 2px solid #FF0000;
+}
+
+#boton-fuego:hover {
+    background: linear-gradient(to bottom, #FF2E4D, #FF0000);
+    transform: scale(1.05);
+}
+
+/* Botón AGUA */
+#boton-agua {
+    background: linear-gradient(to bottom, #00B4DB, #0083B0);
+    border: 2px solid #005F73;
+}
+
+#boton-agua:hover {
+    background: linear-gradient(to bottom, #0083B0, #005F73);
+    transform: scale(1.05);
+}
+
+/* Botón TIERRA */
+#boton-tierra {
+    background: linear-gradient(to bottom, #C4A484, #8B5A2B);
+    border: 2px solid #5D4037;
+}
+
+#boton-tierra:hover {
+    background: linear-gradient(to bottom, #8B5A2B, #5D4037);
+    transform: scale(1.05);
+}
+
+/* Efecto al presionar */
+.boton-ataque:active {
+    transform: scale(0.95);
+}
+.boton-ataque::before {
+    font-size: 24px;
+    margin-right: 8px;
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+.boton-ataque:focus {
+    animation: pulse 0.5s;
+}

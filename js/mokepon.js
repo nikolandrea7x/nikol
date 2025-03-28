@@ -44,11 +44,11 @@ function seleccionarMascotaJugador(){
 
     let spanMascotaJugador = document.getElementById("mascota-jugador")
 
-    if (hipodogeSeleccionado){
+    if (Nepenthes_AlucinadaSeleccionado){
         spanMascotaJugador.innerHTML = "Nepenthes Alucinada"
-    }else if(capipepoSeleccionado){
+    }else if(Dionaea_MechánicaSeleccionado){
         spanMascotaJugador.innerHTML = "Dionaea Mechánica"
-    }else if(ratigueyaSeleccionado){
+    }else if(Drosera_CósmicaSeleccionado){
         spanMascotaJugador.innerHTML = "Drosera Cósmica"
     }else{
         alert("Debes seleccionar una Mascota")
@@ -161,6 +161,11 @@ function crearMensajeFinal(resultadoFinal){
 
     let sectionReiniciar= document.getElementById("reiniciar")
     sectionReiniciar.style.display = "block"
+}
+function ataqueFuego() {
+    const audio = new Audio('assets/sonido-fuego.mp3');
+    audio.play();
+    // Resto del código...
 }
 
 function reiniciarJuego(){
