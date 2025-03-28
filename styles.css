@@ -132,5 +132,5 @@ input{
 }
 input[type="radio"]:checked + .tarjeta-de-mokepon {
     background: #90e0ef;
-    border: 2px solid #010213;
+    border: 2px solid #060d99;
 }
