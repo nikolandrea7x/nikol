@@ -66,16 +66,47 @@ input{
 }
 
 #boton-mascota{
-    box-sizing: border-box;
-    width: 130px;
-    height: 40px;
-    background-color: chartreuse;
-    border: 2px solid black;
-    border-radius: 20px;
-    padding: 10px;
-    margin: 10px;
-    font-size: 20px;
+    color: #0a5a0a; /* Amarillo brillante */
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px rgba(67, 202, 55, 0.7);
 }
+
+/* Botón Reiniciar mejorado */
+#boton-mascota {
+    background: linear-gradient(135deg, #63fc3d, #149902);
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 
+        0 4px 15px rgba(2, 143, 9, 0.6),
+        0 0 0 2px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto hover y active */
+#boton-mascota:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        0 6px 20px rgba(1, 102, 60, 0.8),
+        0 0 0 2px rgba(3, 155, 23, 0.2);
+}
+
+#boton-mascota:active {
+    transform: translateY(1px);
+}
+#boton-mascota:hover::after {
+    opacity: 1;
+    top: -20%;
+    left: -20%;
+}
+
 
 #seleccionar-ataque{
     flex-direction: column;
@@ -230,7 +261,7 @@ input[type="radio"]:checked + .tarjeta-de-mokepon {
 }
 /* Color y estilo para los textos de batalla */
 #vidas-jugador, #mascota-jugador, #ataques-del-enemigo {
-    color: rgb(241, 241, 68); /* Amarillo brillante */
+    color: rgb(247, 247, 25); /* Amarillo brillante */
     font-size: 24px;
     text-shadow: 2px 2px 4px #000; /* Sombra para mejor legibilidad */
     margin: 10px 0;
@@ -259,7 +290,7 @@ input[type="radio"]:checked + .tarjeta-de-mokepon {
 #resultado, .subtitulo {
     animation: pulse 2s infinite;
 }
-.golpeado {
+.boton-ataque:focus {
     animation: shake 0.5s;
     color: red !important;
 }
@@ -268,4 +299,53 @@ input[type="radio"]:checked + .tarjeta-de-mokepon {
     0%, 100% { transform: translateX(0); }
     25% { transform: translateX(-10px); }
     75% { transform: translateX(10px); }
+}
+
+/* Animación al aparecer */
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Texto de resultado final */
+#resultado {
+    color: #0a5a0a; /* Amarillo brillante */
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px rgba(67, 202, 55, 0.7);
+}
+
+/* Botón Reiniciar mejorado */
+#boton-reiniciar {
+    background: linear-gradient(135deg, #63fc3d, #149902);
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 
+        0 4px 15px rgba(2, 143, 9, 0.6),
+        0 0 0 2px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto hover y active */
+#boton-reiniciar:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        0 6px 20px rgba(1, 102, 60, 0.8),
+        0 0 0 2px rgba(3, 155, 23, 0.2);
+}
+
+#boton-reiniciar:active {
+    transform: translateY(1px);
+}
+#boton-reiniciar:hover::after {
+    opacity: 1;
+    top: -20%;
+    left: -20%;
 }

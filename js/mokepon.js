@@ -127,18 +127,7 @@ function combate(){
 
     revisarVidas()
 
-    if (vidasEnemigo < 3) {
-        document.getElementById("mascota-enemigo").classList.add("golpeado");
-        setTimeout(() => {
-            document.getElementById("mascota-enemigo").classList.remove("golpeado");
-        }, 500);
-    }
-    if (vidasJugador < 3) {
-        document.getElementById("mascota-jugador").classList.add("golpeado");
-        setTimeout(() => {
-            document.getElementById("mascota-jugador").classList.remove("golpeado");
-        }, 500);
-    }
+    
 }
 
 function revisarVidas(){
