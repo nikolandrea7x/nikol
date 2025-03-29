@@ -120,12 +120,19 @@ input{
     grid-template-columns: 100px 100px;
     text-align: center;
     text-align: center;
+    color: #bde0fe;
 }
 .tarjeta-de-mokepon {
     background: #bde0fe;
     padding: 20px;
     border-radius: 10px;
     transition: transform 0.3s;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border: 3px solid #03045e;
+}
+input[type="radio"]:checked + .tarjeta-de-mokepon {
+    box-shadow: 0 0 20px #90e0ef;
+    filter: brightness(1.1);
 }
 .tarjeta-de-mokepon:hover {
     transform: scale(1.05);
@@ -205,4 +212,50 @@ input[type="radio"]:checked + .tarjeta-de-mokepon {
 }
 .boton-ataque:focus {
     animation: pulse 0.5s;
+}
+.barra-vida {
+    width: 100%;
+    height: 20px;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.vida {
+    height: 100%;
+    background: linear-gradient(to right, #4CAF50, #8BC34A);
+    transition: width 0.5s ease;
+    box-shadow: 0 0 10px #4CAF50;
+}
+/* Color y estilo para los textos de batalla */
+#vidas-jugador, #mascota-jugador, #ataques-del-enemigo {
+    color: rgb(241, 241, 68); /* Amarillo brillante */
+    font-size: 24px;
+    text-shadow: 2px 2px 4px #000; /* Sombra para mejor legibilidad */
+    margin: 10px 0;
+}
+#vidas-enemigo, #mascota-enemigo, #ataques-del-enemigo {
+    color: rgb(16, 129, 204); /* Amarillo brillante */
+    font-size: 24px;
+    text-shadow: 2px 2px 4px #000; /* Sombra para mejor legibilidad */
+    margin: 10px 0;
+}
+
+/* Estilo para el resultado del combate */
+#resultado {
+    color: #ff5555; /* Rojo llamativo */
+    font-size: 28px;
+    font-weight: bold;
+    animation: pulse 1s infinite; /* Animación (agregada abajo) */
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Aplicar a mensajes importantes */
+#resultado, .subtitulo {
+    animation: pulse 2s infinite;
 }
