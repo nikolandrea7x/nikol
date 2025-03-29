@@ -259,3 +259,13 @@ input[type="radio"]:checked + .tarjeta-de-mokepon {
 #resultado, .subtitulo {
     animation: pulse 2s infinite;
 }
+.golpeado {
+    animation: shake 0.5s;
+    color: red !important;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
